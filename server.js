@@ -6,7 +6,7 @@ function sleep(ms) {
 
 async function main() {
   while(true) {
-    console.log(dockerUsername);
+    console.log('containers are awesome!');
     await sleep(5000);
   }
 }
