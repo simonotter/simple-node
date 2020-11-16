@@ -14,8 +14,10 @@ spec:
       labels:
         app: my-app
     spec:
+      terminationGracePeriodSeconds: 30
       containers:
       - name: my-app
-        image: simonotter/simple-node
+        image: simonotter/simple-node:latest
+        imagePullPolicy: "Always"
         ports:
         - containerPort: 8080
