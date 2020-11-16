@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: my-app
   labels:
-    run: my-app
+    service: my-app
 spec:
   ports:
   - port: 80
