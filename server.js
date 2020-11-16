@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 })
 
 // Health endpoint
-app.get('/heath', (req, res) => {
+app.get('/health', (req, res) => {
   res.status(200).send("Healthy");
 });
 
