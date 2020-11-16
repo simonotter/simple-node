@@ -1,14 +1,11 @@
-const dockerUsername = process.env.DOCKER_USERNAME;
+const express = require('express');
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+const app = express();
+const port = 8080;
 
-async function main() {
-  while(true) {
-    console.log('containers are awesome!');
-    await sleep(5000);
-  }
-}
-
-main();
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+})
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
