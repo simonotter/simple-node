@@ -21,3 +21,9 @@ spec:
         imagePullPolicy: "Always"
         ports:
         - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /heath
+            port: 8080
+          initialDelaySeconds: 3
+          periodSeconds: 3
